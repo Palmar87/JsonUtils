@@ -149,10 +149,12 @@ namespace JsonUtils.Controllers
                 writer = new VisualBasicCodeWriter();
             else if (language == 7)
                 writer = new TypeScriptCodeWriter();
-            else if(language == 4)
+            else if (language == 4)
                 writer = new SqlCodeWriter();
-            else if(language == 5)
+            else if (language == 5)
                 writer = new JavaCodeWriter();
+            else if (language == 8)
+                writer = new XPlusPlusCodeWriter();
             else
                 writer = new PhpCodeWriter();
 

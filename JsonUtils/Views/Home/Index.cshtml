@@ -97,6 +97,12 @@
                         TypeScript
                     </label>
                 </div>
+                <div class="radio-inline">
+                    <label>
+                        @Html.RadioButton("Language", 8, Model.Language == 8)
+                        X++
+                    </label>
+                </div>
             </div>
         </div>
         <div class="row">
@@ -217,7 +223,7 @@
 
     @if (Model.Language == 3)
     {
-        <text>    
+        <text>
             $('#jsonobjects > pre').text('var myObject = ' + JSON.stringify(JSON.parse($('#json-text').text()), null, "\t") + ';');
         </text>
     }
@@ -286,8 +292,13 @@
                 $('#Pascal').attr('disabled', 'disabled');
                 $('#PropertyAttribute').attr('disabled', 'disabled');
                 break;
+            case 8: //X++
+                $('#Pascal').attr('disabled', 'disabled');
+                $('#PropertyAttribute').val('DataMember');
+                $('#PropertyAttribute').attr('disabled', 'disabled');
+                break;
             default:
-                
+
         }
     }
 
@@ -396,7 +407,7 @@
             });
 
         checkNestCheckbox($('#Nest'));
-    
+
         $('#Nest').click(function () {
             checkNestCheckbox($(this));
         });

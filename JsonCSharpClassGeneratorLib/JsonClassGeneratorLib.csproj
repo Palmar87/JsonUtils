@@ -52,6 +52,7 @@
     <Compile Include="CodeWriters\TypeScriptCodeWriter.cs" />
     <Compile Include="CodeWriters\VisualBasicCodeWriter.cs" />
     <Compile Include="CodeWriters\CSharpCodeWriter.cs" />
+    <Compile Include="CodeWriters\XPlusPlusCodeWriter.cs" />
     <Compile Include="FieldInfo.cs" />
     <Compile Include="ICodeWriter.cs" />
     <Compile Include="IJsonClassGeneratorConfig.cs" />
